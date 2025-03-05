@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * Struktura współrzędnych. 
  */
@@ -43,3 +47,7 @@ struct Point updateDot(int x, int y);
  * Wyświetla nową pozycję. 
  */
 void showNewDot(struct Point point);
+
+#ifdef __cplusplus
+}
+#endif
