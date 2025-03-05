@@ -4,6 +4,9 @@
 extern "C" {
 #endif
 
+#define ROWS 13 
+#define COLS ROWS 
+
 /**
  * Struktura współrzędnych. 
  */
