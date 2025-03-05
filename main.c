@@ -26,7 +26,6 @@ int main()
 			showNewDot(updateDot(actualDot(x, y).x, actualDot(x,y).y));
 		turn ^= 1;
 
-		printf("%i", turn);
 		printf("\n");
 
 		do {
