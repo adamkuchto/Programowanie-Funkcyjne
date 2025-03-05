@@ -16,7 +16,7 @@ struct Point {
 };
 
 /**
- * Ustawia wartość wychylenia w górę.
+ * Ustawia wartość osi x.
  * 
  * @param value - wartość.
  * @return value - jeśli jest poprawna, 0 - jeśli poza zakresem.
@@ -24,7 +24,7 @@ struct Point {
 int setX(int value);
 
 /**
- * Ustawia wartość wychylenia w dół.
+ * Ustawia wartość osi y.
  * 
  * @param value - wartość.
  * @return value - jesli jest poprawna, 0 - jesli poza zakresem.
