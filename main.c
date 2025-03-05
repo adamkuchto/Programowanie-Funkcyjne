@@ -24,8 +24,8 @@ int main()
 								setY(printInfoBadValue(checkValueFromUser(y)))));
 		else
 			// Zestaw nr 2.
-			showNewDot(updateDot(printInfoBadValue(actualDot(x, y).x),
-								printInfoBadValue(actualDot(x,y).y)));
+			showNewDot(updateDot(printInfoBadValue(checkValueFromUser(actualDot(x, y).x)),
+								printInfoBadValue(checkValueFromUser(actualDot(x,y).y))));
 		turn ^= 1;
 
 		int set = 1;
@@ -54,12 +54,12 @@ int checkValueFromUser(int value)
 {
 	if (value > -6 && value < 6)
 		return value;
-	return 0;
+	return BAD_VALUE;
 }
 
 int printInfoBadValue(int value)
 {
-	if (value == 0)
+	if (value == BAD_VALUE)
 		printf("\033[1;31mInvalid value\033[0m\r\n");
 	return value;
 }

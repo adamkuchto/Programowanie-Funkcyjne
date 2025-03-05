@@ -1,6 +1,7 @@
 #pragma once
 
 #define AGAIN 'A'
+#define BAD_VALUE 255
 
 /**
  * Zwraca strukturę z x i y. 
