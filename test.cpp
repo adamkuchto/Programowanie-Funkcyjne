@@ -23,7 +23,7 @@ TEST(TestSetY, NegativeNumbers) {
 
 TEST(TestUpdateDot, PositiveNumbers) {
 	Point p;
-	for(int i = -5, j = 10, k = 0; i < 6; i++, j--, k++){
+	for(int i = -5, j = 11, k = 1; i < 6; i++, j--, k++){
 		p = updateDot(i, i);
 		EXPECT_EQ(p.x, k);
 		EXPECT_EQ(p.y, j);
