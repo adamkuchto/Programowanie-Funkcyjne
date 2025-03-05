@@ -2,14 +2,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "joystick.h"
-
-struct Point actualDot(int x, int y);
-int getValueFromUser(int value);
+#include "main.h"
 
 int main()
 {
 	int x, y;
-	char c = 'A';
+	char c = AGAIN;
 	static int turn = 0;
 
 	while (c == 'A') {
@@ -21,7 +19,7 @@ int main()
 		printf("\n");
 
 		if (turn)
-			showNewDot(updateDot(setX(getValueFromUser(x)), setY(getValueFromUser(y))));
+			showNewDot(updateDot(setX(checkValueFromUser(x)), setY(checkValueFromUser(y))));
 		else
 			showNewDot(updateDot(actualDot(x, y).x, actualDot(x,y).y));
 		turn ^= 1;
@@ -39,8 +37,6 @@ int main()
 	}
 
 	exit(EXIT_SUCCESS);
-
-	return 0;
 }
 
 struct Point actualDot(int x, int y)
@@ -49,7 +45,7 @@ struct Point actualDot(int x, int y)
 	return tmp;
 }
 
-int getValueFromUser(int value)
+int checkValueFromUser(int value)
 {
 	if (value > -6 && value < 6)
 		return value;
