@@ -3,14 +3,14 @@
 
 int setX(int value)
 {
-	if(value > -5 && value < 6)
+	if(value > -6 && value < 6)
 		return value;
 	return 0;
 }
 
 int setY(int value)
 {
-	if(value > -5 && value < 6)
+	if(value > -6 && value < 6)
 		return value;
 	return 0;
 }
