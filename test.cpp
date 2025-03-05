@@ -21,6 +21,15 @@ TEST(TestSetY, NegativeNumbers) {
 	EXPECT_EQ(setY(-6), 0);
 }
 
+TEST(TestUpdateDot, PositiveNumbers) {
+	Point p;
+	for(int i = -5, j = 10, k = 0; i < 6; i++, j--, k++){
+		p = updateDot(i, i);
+		EXPECT_EQ(p.x, k);
+		EXPECT_EQ(p.y, j);
+	}
+}
+
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
