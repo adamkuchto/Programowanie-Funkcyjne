@@ -8,7 +8,7 @@ int main()
 {
 	int x, y;
 	char c = AGAIN;
-	static int turn = 0;
+	static int turn = 1;
 
 	while (c == 'A') {
 		system("clear");
@@ -19,12 +19,17 @@ int main()
 		printf("\n");
 
 		if (turn)
-			showNewDot(updateDot(setX(checkValueFromUser(x)), setY(checkValueFromUser(y))));
+			// Zestaw nr 1.
+			showNewDot(updateDot(setX(printInfoBadValue(checkValueFromUser(x))),
+								setY(printInfoBadValue(checkValueFromUser(y)))));
 		else
-			showNewDot(updateDot(actualDot(x, y).x, actualDot(x,y).y));
+			// Zestaw nr 2.
+			showNewDot(updateDot(printInfoBadValue(actualDot(x, y).x),
+								printInfoBadValue(actualDot(x,y).y)));
 		turn ^= 1;
 
-		printf("\n");
+		int set = 1;
+		printf("\nUruchomiono zestaw: %i\n", set+turn);
 
 		do {
 			printf("Press (A)gain - or (E)xit \n");
@@ -50,4 +55,11 @@ int checkValueFromUser(int value)
 	if (value > -6 && value < 6)
 		return value;
 	return 0;
+}
+
+int printInfoBadValue(int value)
+{
+	if (value == 0)
+		printf("\033[1;31mInvalid value\033[0m\r\n");
+	return value;
 }

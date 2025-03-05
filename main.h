@@ -18,3 +18,11 @@ struct Point actualDot(int x, int y);
  * @return value - jesli jest poprawna, 0 - jesli poza zakresem.
  */
 int checkValueFromUser(int value);
+
+/**
+ * Informuje o niepoprawnej wartości.  
+ * 
+ * @param value - Wartość wprowadzona przez użytkownika.
+ * @return value - Niezmieniona wartość wprowadzona przez użytkownika.
+ */
+int printInfoBadValue(int value);
