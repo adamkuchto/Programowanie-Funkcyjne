@@ -64,7 +64,7 @@ void showNewDot(struct Point point)
     {'+','|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '+'}
 	};
 
-	tab[point.x][point.y] = '+';
+	tab[point.x][point.y] = 'O';
 
 	printf("\033[1;32m");
 	for (int y = 0; y < COLS; y++) {
